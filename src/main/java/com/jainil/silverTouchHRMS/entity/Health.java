@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
+@Table(name = "tbl_health")
 public class Health {
 
     @Id
@@ -24,7 +25,7 @@ public class Health {
 
 
     @NotBlank
-    private String group;
+    private String healthGroup;
 
     private String identificationMark1;
     private String identificationMark2;
@@ -32,6 +33,8 @@ public class Health {
     private Boolean physicallyHandicapped;
 
 
-    @OneToOne(mappedBy = "employeeHealth")
+//    @OneToOne(mappedBy = "employeeHealth")
+    @OneToOne
+    @JoinColumn(name = "fk_employee_id", referencedColumnName = "emp_id")
     private Employee employee;
 }

@@ -53,10 +53,13 @@ public class Contact {
 
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(referencedColumnName = "contact_id" , name = "fk_contact_id")
+    @JoinColumn(referencedColumnName = "column_id" , name = "fk_contact_id")
     private List<Address> addresses;
 
-    @OneToOne(mappedBy = "employeeContact")
+//    @OneToOne(mappedBy = "employeeContact")
+//    @OneToOne
+    @OneToOne
+    @JoinColumn(name = "fk_employee_id", referencedColumnName = "emp_id")
     private Employee employee;
 
 }

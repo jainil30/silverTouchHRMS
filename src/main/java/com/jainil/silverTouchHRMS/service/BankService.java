@@ -8,4 +8,6 @@ public interface BankService {
 
 
     public Bank fetchBankByEmployeeId(Long id);
+
+    public void deleteBankByEmployeeId(Long empId);
 }

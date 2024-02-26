@@ -30,6 +30,9 @@ public class Bank {
 
     private String bsrCode;
 
-    @OneToOne(mappedBy = "employeeBank")
+//    @OneToOne(mappedBy = "employeeBank")
+//    @OneToOne
+    @OneToOne
+    @JoinColumn(name = "fk_employee_id", referencedColumnName = "emp_id")
     private Employee employee;
 }

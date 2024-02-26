@@ -13,5 +13,5 @@ public interface AttachmentService {
 
     public List<Attachment> fetchByEmployeeId(Long empId);
 
-    public void deleteAttachmentbyEmpId(Long empId);
+    public void deleteAttachmentByEmpId(Long empId);
 }

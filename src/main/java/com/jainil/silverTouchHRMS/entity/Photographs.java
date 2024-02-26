@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
+@Table(name = "tbl_photograph")
 public class Photographs {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,7 +23,12 @@ public class Photographs {
     private String employeeSignImageUrl;
 
 
-    @OneToOne(mappedBy = "employeePhotograph")
+//    @OneToOne(mappedBy = "employeePhotograph")
+    @ManyToOne
     private Employee employee;
+
+//
+//    @OneToOne
+//    private Employee employee;
 
 }

@@ -41,5 +41,10 @@ public class AddressServiceImplementation implements AddressService{
 //        }
     }
 
+    @Override
+    public void deleteAddressByEmpId(Long empId) {
+        addressRepository.deleteByEmpId(empId);
+    }
+
 
 }

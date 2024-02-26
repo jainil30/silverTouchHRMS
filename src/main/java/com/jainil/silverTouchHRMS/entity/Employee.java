@@ -24,7 +24,7 @@ public class Employee {
     private String employeeCodePrefix;
 
     @NotBlank
-    private Integer employeeCodeSufix;
+    private Integer employeeCodeSuffix;
 
     @NotBlank
     private String employeePanNumber;
@@ -104,9 +104,9 @@ public class Employee {
     @JoinColumn(name = "fk_health_id")
     private Health employeeHealth;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_photograph_id")
-    private Photographs employeePhotograph;
+    private List<Photographs> employeePhotograph;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_employee_id",referencedColumnName = "emp_id")
@@ -122,7 +122,7 @@ public class Employee {
 
     public Employee(String employeeCodePrefix, Integer employeeCodeSufix, String employeePanNumber, String employeeOldEmployeeCode, Date employeeDateOfAppointment, Long employeeBioMetricId, String employeeSalution, String employeeDepartment, String employeeFirstName, String employeeMiddleName, String employeeLastName, String employeeUnit, Boolean employeeIsGazetted, Designation employeeDesignation, String employeeGroup, String employeeEligibleFor, Boolean employeeIsCoveredUnderGratuityAct) {
         this.employeeCodePrefix = employeeCodePrefix;
-        this.employeeCodeSufix = employeeCodeSufix;
+        this.employeeCodeSuffix = employeeCodeSufix;
         this.employeePanNumber = employeePanNumber;
         this.employeeOldEmployeeCode = employeeOldEmployeeCode;
         this.employeeDateOfAppointment = employeeDateOfAppointment;

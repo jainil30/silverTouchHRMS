@@ -11,6 +11,7 @@ import java.util.Date;
 @Entity
 @Data
 @NoArgsConstructor
+@Table(name = "tbl_family")
 public class Family {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -56,6 +57,9 @@ public class Family {
     private String address;
 
 
-    @OneToOne(mappedBy = "employeeFamily")
+//    @OneToOne(mappedBy = "employeeFamily")
+//    @OneToOne
+    @OneToOne
+    @JoinColumn(name = "fk_employee_id", referencedColumnName = "emp_id")
     private Employee employee;
 }

@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
+@Table(name="tbl_emergency")
 public class Emergency {
 
     @Id
@@ -44,6 +45,9 @@ public class Emergency {
     private String address;
 
 
-    @OneToOne(mappedBy = "employeeEmergency")
+//    @OneToOne(mappedBy = "employeeEmergency")
+//    @OneToOne
+    @OneToOne
+    @JoinColumn(name = "fk_employee_id", referencedColumnName = "emp_id")
     private Employee employee;
 }

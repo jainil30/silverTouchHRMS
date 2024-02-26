@@ -18,6 +18,7 @@ public class Attachment {
     private Long attachmentId;
 
     @NotNull
+    @OneToOne(cascade = CascadeType.ALL)
     private DocumentCategory documentCategory;
 
     @NotBlank
@@ -28,7 +29,8 @@ public class Attachment {
     @NotBlank
     private String documentUrl;
 
-//
-//    @OneToOne(mappedBy = "employeeAttachments")
-//    private Employee employee;
+
+    @ManyToOne
+    @JoinColumn(name = "employee_id",referencedColumnName = "emp_id")
+    private Employee employee;
 }

@@ -13,4 +13,6 @@ public interface AddressService {
     public void saveAddress(Address address);
 
     public void updateAddress(Address address);
+
+    public void deleteAddressByEmpId(Long empId);
 }

@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
+@Table(name= "tbl_document_category")
 public class DocumentCategory {
 
     @Id
@@ -18,4 +19,9 @@ public class DocumentCategory {
 
     @NotBlank
     private String documentCategoryName;
+
+    @OneToOne(mappedBy = "documentCategory")
+    @JoinColumn(name = "fk_attachment_id", referencedColumnName = "attachmentId")
+//    @OneToOne
+    private Attachment attachmentId;
 }

@@ -30,7 +30,7 @@ public class AttachmentServiceImplementation implements AttachmentService{
     }
 
     @Override
-    public void deleteAttachmentbyEmpId(Long empId) {
+    public void deleteAttachmentByEmpId(Long empId) {
         attachmentRepository.deleteByEmpId(empId);
     }
 

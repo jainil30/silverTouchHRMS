@@ -21,5 +21,10 @@ public class BankServiceImplementation implements BankService{
         return bankRepository.findBankByEmployeeId(id);
     }
 
+    @Override
+    public void deleteBankByEmployeeId(Long empId) {
+        bankRepository.deleteByEmpId(empId);
+    }
+
 
 }

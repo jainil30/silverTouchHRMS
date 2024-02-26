@@ -53,6 +53,9 @@ public class Nominee {
     private String nomineeInvalidCondition;
 
 
-    @OneToOne(mappedBy = "employeeNominee")
+//    @OneToOne(mappedBy = "employeeNominee")
+//    @OneToOne
+    @OneToOne
+    @JoinColumn(name = "fk_employee_id", referencedColumnName = "emp_id")
     private Employee employee;
 }

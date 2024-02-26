@@ -39,6 +39,9 @@ public class DrivingLicenseNumber {
     private String additionalInformation;
 
 
-    @OneToOne(mappedBy = "employeeDrivingLicense")
+//    @OneToOne(mappedBy = "employeeDrivingLicense")
+//    @OneToOne
+    @OneToOne
+    @JoinColumn(name = "fk_employee_id", referencedColumnName = "emp_id")
     private Employee employee;
 }
