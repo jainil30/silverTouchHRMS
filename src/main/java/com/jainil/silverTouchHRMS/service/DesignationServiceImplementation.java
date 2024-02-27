@@ -5,6 +5,8 @@ import com.jainil.silverTouchHRMS.repository.DesignationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class DesignationServiceImplementation implements DesignationService{
 
@@ -17,6 +19,11 @@ public class DesignationServiceImplementation implements DesignationService{
     }
 
     @Override
+    public List<Designation> fetchAllDesignation() {
+        return designationRepository.findAll();
+    }
+
+    @Override
     public Designation fetchDesignationByEmpId(Long empId) {
         return designationRepository.findDesignationByEmployeeId(empId);
     }
@@ -24,6 +31,11 @@ public class DesignationServiceImplementation implements DesignationService{
     @Override
     public void deleteDesignationByEmpId(Long empId) {
         designationRepository.deleteByEmpId(empId);
+    }
+
+    @Override
+    public Designation fetchById(Long designationId) {
+        return designationRepository.findById(designationId).orElseThrow();
     }
 
 

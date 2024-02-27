@@ -31,6 +31,6 @@ public class Attachment {
 
 
     @ManyToOne
-    @JoinColumn(name = "employee_id",referencedColumnName = "emp_id")
+    @JoinColumn(name = "employee_id")
     private Employee employee;
 }

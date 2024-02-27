@@ -57,9 +57,9 @@ public class Family {
     private String address;
 
 
-//    @OneToOne(mappedBy = "employeeFamily")
+    @OneToOne(mappedBy = "employeeFamily", cascade = CascadeType.ALL)
 //    @OneToOne
-    @OneToOne
-    @JoinColumn(name = "fk_employee_id", referencedColumnName = "emp_id")
+//    @OneToOne
+//    @JoinColumn(name = "fk_employee_id", referencedColumnName = "emp_id")
     private Employee employee;
 }

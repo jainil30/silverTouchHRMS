@@ -39,9 +39,9 @@ public class DrivingLicenseNumber {
     private String additionalInformation;
 
 
-//    @OneToOne(mappedBy = "employeeDrivingLicense")
+    @OneToOne(mappedBy = "employeeDrivingLicense", cascade = CascadeType.ALL)
 //    @OneToOne
-    @OneToOne
-    @JoinColumn(name = "fk_employee_id", referencedColumnName = "emp_id")
+//    @OneToOne
+//    @JoinColumn(name = "fk_employee_id")
     private Employee employee;
 }

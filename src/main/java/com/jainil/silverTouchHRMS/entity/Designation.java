@@ -20,9 +20,10 @@ public class Designation {
     @NotBlank(message = "Designation cannot be empty")
     private String designationName;
 
-//    @OneToOne(mappedBy = "employeeDesignation")
+//    @OneToOne(mappedBy = "employeeDesignation",cascade = CascadeType.ALL)
 //    @OneToOne
-    @OneToOne
-    @JoinColumn(name = "fk_employee_id", referencedColumnName = "emp_id")
+//    @OneToOne
+//    @JoinColumn(name = "fk_employee_id")
+    @OneToOne(mappedBy = "employeeDesignation", cascade = CascadeType.ALL)
     private Employee employee;
 }

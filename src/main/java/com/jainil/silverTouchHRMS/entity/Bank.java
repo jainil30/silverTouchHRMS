@@ -30,9 +30,9 @@ public class Bank {
 
     private String bsrCode;
 
-//    @OneToOne(mappedBy = "employeeBank")
+    @OneToOne(mappedBy = "employeeBank", cascade = CascadeType.ALL)
 //    @OneToOne
-    @OneToOne
-    @JoinColumn(name = "fk_employee_id", referencedColumnName = "emp_id")
+//    @OneToOne
+//    @JoinColumn(name = "fk_employee_id")
     private Employee employee;
 }

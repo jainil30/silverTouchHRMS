@@ -2,6 +2,7 @@ package com.jainil.silverTouchHRMS.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,7 +24,7 @@ public class Employee {
     @NotBlank
     private String employeeCodePrefix;
 
-    @NotBlank
+    @NotNull
     private Integer employeeCodeSuffix;
 
     @NotBlank
@@ -63,15 +64,16 @@ public class Employee {
     @NotBlank
     private String employeeGroup;
 
-    @NotBlank
+//    @NotBlank
     private String employeeEligibleFor;
     private Boolean employeeIsCoveredUnderGratuityAct;
 
 
 
     //Mappings
-    @NotBlank
-    @OneToOne(cascade = CascadeType.ALL)
+    @NotNull
+//    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_designation_id")
     private Designation employeeDesignation;
 
@@ -116,6 +118,9 @@ public class Employee {
     @JoinColumn(name = "fk_driving_license_id")
     private DrivingLicenseNumber employeeDrivingLicense;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "fk_passport_id")
+    private Passport employeePassport;
 
 
 

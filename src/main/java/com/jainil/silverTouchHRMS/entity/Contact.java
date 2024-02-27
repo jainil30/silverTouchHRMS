@@ -56,10 +56,10 @@ public class Contact {
     @JoinColumn(referencedColumnName = "column_id" , name = "fk_contact_id")
     private List<Address> addresses;
 
-//    @OneToOne(mappedBy = "employeeContact")
-//    @OneToOne
-    @OneToOne
-    @JoinColumn(name = "fk_employee_id", referencedColumnName = "emp_id")
-    private Employee employee;
 
+    @OneToOne(mappedBy = "employeeContact", cascade = CascadeType.ALL)
+//    @OneToOne
+//    @OneToOne
+//    @JoinColumn(name = "fk_employee_id")
+    private Employee employee;
 }

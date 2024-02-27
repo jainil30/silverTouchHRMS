@@ -15,7 +15,7 @@
 		        </div>
 		    </div>
 		    <div class="col-md-auto ms-auto text-end me-3">
-		        <a href="/addEmployee" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add Employee</a>
+		        <a href="/admin/addEmployee" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add Employee</a>
 		    </div>
 		</div>
     </div>
@@ -35,11 +35,11 @@
             <tbody>
                 <c:forEach var="emp" items="${employees}">
                     <tr>
-                        <td><img src="images/logo.png" alt="Employee" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;" />${emp.employeeFirstName}</td>
-                        <td>${emp.employeeCodePrefix}/${emp.employeeCodeSuffix} </td>
-                        <td>Java </td>
+                        <td><img src="/images/srrlLogo.png" alt="Employee" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;" />${emp.employeeFirstName}</td>
+                        <td>${emp.employeeCodePrefix} / ${emp.employeeCodeSuffix} </td>
+                        <td>${emp.employeeLastName} </td>
+                        <td>${emp.employeeDepartment}</td>
                         <td>${emp.employeePanNumber}</td>
-                        <td>${emp.employeeUnit}</td>
                         <td><i class="fs-3 me-2 fa-solid fa-circle-info"></i><i class="fs-3 fa-solid fa-circle-info"></i></td>
                     </tr>
                 </c:forEach>

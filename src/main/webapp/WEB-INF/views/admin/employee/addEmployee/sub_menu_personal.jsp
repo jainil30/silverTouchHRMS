@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <div id="sub_menu_personal">
     <div class="row-auto">
         <div class="row">
@@ -18,7 +19,8 @@
                                 <span class="text text-danger">*</span>
                             </label>
                             <select id="gender">
-                                <option value="" selected>-- Select Type --</option>
+                                <option value="male" selected>Male</option>
+                                <option value="Female" selected>Female</option>
                             </select>
                         </div>
                     </div>
@@ -26,7 +28,9 @@
                         <div class="form-group">
                             <label for="marriageStatus" class="text-muted">Marriage Status</label>
                             <select id="marriageStatus">
-                                <option value="" selected>-- Select Type --</option>
+                                <option value="Unmarried">Unmarried</option>
+                                <option value="Married">Married</option>
+                                <option value="Divorced">Divorced</option>
                             </select>
                         </div>
                     </div>
@@ -57,7 +61,10 @@
                                 <span class="text text-danger">*</span>
                             </label>
                             <select id="communityCategory">
-                                <option value="" selected>-- Select Type --</option>
+                                <option value="General" selected>General</option>
+                                <option value="SEBC" selected>SEBC</option>
+                                <option value="SC" selected>SC</option>
+                                <option value="ST" selected>ST</option>
                             </select>
                         </div>
                     </div>
@@ -82,7 +89,8 @@
                                 <span class="text text-danger">*</span>
                             </label>
                             <select id="religion">
-                                <option value="" selected>-- Select Type --</option>
+                                <option value="Hindu" selected>Hindu</option>
+                                <option value="Katar Hindu" selected>Katar Hindu</option>
                             </select>
                         </div>
                     </div>
@@ -92,7 +100,8 @@
                         <div class="form-group">
                             <label for="caste" class="text-muted">Caste</label>
                             <select id="caste">
-                                <option value="" selected>-- Select Type --</option>
+                                <option value="kadva" selected>Kadva</option>
+                                <option value="Leva" selected>Leva</option>
                             </select>
                         </div>
                     </div>
@@ -108,7 +117,7 @@
                         <div class="form-group">
                             <label for="nationality" class="text-muted">Nationality</label>
                             <select id="nationality">
-                                <option value="" selected>-- Select Type --</option>
+                                <option value="" selected></option>
                             </select>
                         </div>
                     </div>

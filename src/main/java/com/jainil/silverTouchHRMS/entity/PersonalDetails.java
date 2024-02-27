@@ -56,9 +56,9 @@ public class PersonalDetails {
     private String hobbies;
 
 
-//    @OneToOne(mappedBy = "employeePersonalDetails")
+    @OneToOne(mappedBy = "employeePersonalDetails", cascade = CascadeType.ALL)
 //    @OneToOne
-    @OneToOne
-    @JoinColumn(name = "fk_employee_id", referencedColumnName = "emp_id")
+//    @OneToOne
+//    @JoinColumn(name = "fk_employee_id", referencedColumnName = "emp_id")
     private Employee employee;
 }

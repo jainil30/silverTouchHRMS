@@ -22,8 +22,9 @@ public class Passport {
 
     private String visaDetail;
 
-    @OneToOne
-    @JoinColumn(name = "fk_employee_id", referencedColumnName = "emp_id")
+//    @OneToOne()
+//    @JoinColumn(name = "fk_employee_id", referencedColumnName = "emp_id")
+    @OneToOne(mappedBy = "employeePassport", cascade = CascadeType.ALL)
     private Employee employee;
 
 }

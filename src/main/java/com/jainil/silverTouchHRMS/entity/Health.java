@@ -33,8 +33,8 @@ public class Health {
     private Boolean physicallyHandicapped;
 
 
-//    @OneToOne(mappedBy = "employeeHealth")
-    @OneToOne
-    @JoinColumn(name = "fk_employee_id", referencedColumnName = "emp_id")
+    @OneToOne(mappedBy = "employeeHealth", cascade = CascadeType.ALL)
+//    @OneToOne
+//    @JoinColumn(name = "fk_employee_id")
     private Employee employee;
 }
