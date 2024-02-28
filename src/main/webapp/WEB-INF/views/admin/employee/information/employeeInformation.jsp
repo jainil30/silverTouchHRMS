@@ -35,7 +35,7 @@
             <tbody>
                 <c:forEach var="emp" items="${employees}">
                     <tr>
-                        <td><img src="/images/srrlLogo.png" alt="Employee" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;" />${emp.employeeFirstName}</td>
+                        <td>${emp.employeeFirstName}</td>
                         <td>${emp.employeeCodePrefix} / ${emp.employeeCodeSuffix} </td>
                         <td>${emp.employeeLastName} </td>
                         <td>${emp.employeeDepartment}</td>

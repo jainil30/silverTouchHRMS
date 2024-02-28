@@ -30,19 +30,19 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="firstName" class="text-muted">First Name <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="firstName" placeholder="Enter First Name" />
+                            <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Enter First Name" />
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="middleName" class="text-muted">Middle Name</label>
-                            <input type="text" class="form-control" id="middleName" placeholder="Enter Middle Name" />
+                            <input type="text" class="form-control" name="middleName" id="middleName" placeholder="Enter Middle Name" />
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="lastName" class="text-muted">Last Name</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" />
+                            <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Enter Last Name" />
                         </div>
                     </div>
                 </div>
@@ -50,22 +50,29 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="relation" class="text-muted">Relation <span class="text-danger">*</span></label>
-                            <select id="relationFamily">
+                            <select id="relationFamily" name="relation">
                                 <option value="" selected>-- Select Type --</option>
+                                <option value="Father" >Father</option>
+                                <option value="Mother" >Mother</option>
+                                <option value="Son" >Son</option>
+                                <option value="Daughter" >Daughter</option>
+                                <option value="GrandFather" >GrandFather</option>
+                                <option value="GrandMother" >GrandMother</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="dateOfBirth" class="text-muted">Date of Birth <span class="text-danger">*</span></label>
-                            <input type="date" class="form-control" id="dateOfBirth" />
+                            <input type="date" class="form-control" name="dob" id="dateOfBirth" />
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="gender" class="text-muted">Gender</label>
                             <select id="genderFamily">
-                                <option value="" selected>-- Select Type --</option>
+                                <option value="Male" selected>Male</option>
+                                <option value="Female" selected>Female</option>
                             </select>
                         </div>
                     </div>
@@ -74,42 +81,47 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <input class="form-check-input" type="checkbox" value="" id="isNominee" />
-                            <label class="form-check-label text-muted" for="isNominee"> is Nominee? </label>
+                            <label class="form-check-label text-muted" name="isNominee" for="isNominee"> is Nominee? </label>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="maritalStatus" class="text-muted">Marital Status</label>
-                            <select id="maritalStatusFamily">
-                                <option value="" selected>-- Select Type --</option>
+                            <select id="maritalStatusFamily" name="maritalStatus">
+                                <option value="Unmarried">Unmarried</option>
+                                <option value="Married">Married</option>
+                                <option value="Divorced">Divorced</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="occupation" class="text-muted">Occupation</label>
-                            <input type="text" class="form-control" id="occupation" placeholder="Enter Occupation" />
+                            <input type="text" class="form-control" name="occupation" id="occupation" placeholder="Enter Occupation" />
                         </div>
                     </div>
                 </div>
                 <div class="row align-items-center">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input class="form-check-input" type="checkbox" value="" id="isDependent" />
-                            <label class="form-check-label text-muted" for="isDependent"> is Dependent </label>
+                            <input class="form-check-input" type="checkbox"  id="isDependent" />
+                            <label class="form-check-label text-muted" name="isDependent" for="isDependent"> is Dependent </label>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="contactDetail" class="text-muted">Contact Detail</label>
-                            <input type="text" class="form-control" id="contactDetail" placeholder="Enter Contact Detail" />
+                            <input type="text" class="form-control" id="contactDetail" name="contactDetail" placeholder="Enter Contact Detail" />
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="nationality" class="text-muted">Nationality</label>
-                            <select id="nationalityFamily">
-                                <option value="" selected>-- Select Nationality --</option>
+                            <select id="nationalityFamily" name="nationality">
+                                <option value="Indian" selected>Indian</option>
+                                <option value="American" selected>American</option>
+                                <option value="Britsh" selected>Britsh</option>
+                                <option value="Japanese" selected>Japanese</option>
                             </select>
                         </div>
                     </div>
@@ -117,20 +129,20 @@
                 <div class="row align-items-center">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input class="form-check-input" type="checkbox" value="" id="isResidingWith" />
-                            <label class="form-check-label text-muted" for="isResidingWith"> Is Residing With </label>
+                            <input class="form-check-input" type="checkbox"  id="isResidingWith" />
+                            <label class="form-check-label text-muted" name="isResidingWith" for="isResidingWith"> Is Residing With </label>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label class="form-check-label text-muted" for="canBeContacted"> Can be Contacted in Emergency?</label>
-                            <input class="form-check-input" type="checkbox" value="" id="canBeContacted" />
+                            <input class="form-check-input" type="checkbox" name="canBeContactedInEmergency" id="canBeContacted" />
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label class="form-check-label text-muted" for="isPhysicallyDisabled"> Is Physically Disabled? </label>
-                            <input class="form-check-input" type="checkbox" value="" id="isPhysicallyDisabled" />
+                            <input class="form-check-input" type="checkbox" name="isPhysicallyDisabled" id="isPhysicallyDisabled" />
                         </div>
                     </div>
                 </div>
@@ -138,7 +150,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="address" class="text-muted">Address</label>
-                            <textarea rows="3" cols="3" type="text" class="form-control" id="address" placeholder="Enter Address"></textarea>
+                            <textarea rows="3" cols="3" type="text" name="" class="form-control" id="address" placeholder="Enter Address"></textarea>
                         </div>
                     </div>
                 </div>

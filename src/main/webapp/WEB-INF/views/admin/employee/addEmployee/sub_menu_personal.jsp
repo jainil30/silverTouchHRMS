@@ -10,7 +10,7 @@
     </div>
     <div class="row mt-5">
         <div class="container">
-            <form>
+            <form action="/admin/savePersonalInfo" method="POST">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
@@ -117,7 +117,10 @@
                         <div class="form-group">
                             <label for="nationality" class="text-muted">Nationality</label>
                             <select id="nationality" name="nationality" >
-                                <option value="" selected></option>
+                                <option value="Indian" selected>Indian</option>
+                                <option value="American" selected>American</option>
+                                <option value="Britsh" selected>Britsh</option>
+                                <option value="Japanese" selected>Japanese</option>
                             </select>
                         </div>
                     </div>
@@ -143,7 +146,9 @@
                                 <span class="text text-danger">*</span>
                             </label>
                             <select id="bankName" name="bankName">
-                                <option value="" selected>-- Select Type --</option>
+                                <option value="SBI" selected>State Bank of India</option>
+                                <option value="Yes Bank" selected>Yes Bank</option>
+                                <option value="BOI" selected>Bank of India</option>
                             </select>
                         </div>
                     </div>
@@ -151,7 +156,10 @@
                         <div class="form-group">
                             <label for="bankBranchName" class="text-muted">Bank Branch Name</label>
                             <select id="bankBranchName" name="bankBranchName">
-                                <option value="" selected>-- Select Type --</option>
+                                <option value="Ahmedabad" selected>Ahmedabad</option>
+                                <option value="Bhavnagar" selected>Bhavnagar</option>
+                                <option value="Botad" selected>Botad</option>
+                                <option value="Pune" selected>Pune</option>
                             </select>
                         </div>
                     </div>
@@ -320,7 +328,10 @@
                         <div class="form-group">
                             <label for="country" class="text-muted">Country</label>
                             <select id="country" name="migratedCountry">
-                                <option value="" selected>-- Select Type --</option>
+                                <option value="Indian" selected>Indian</option>
+                                <option value="American" selected>American</option>
+                                <option value="Britsh" selected>Britsh</option>
+                                <option value="Japanese" selected>Japanese</option>
                             </select>
                         </div>
                     </div>
@@ -345,3 +356,25 @@
         </div>
     </div>
 </div>
+
+<script>
+
+$(document).ready(function () {
+    // Fetch countries data from the REST Countries API
+  fetch("https://restcountries.com/v2/all")
+    .then(response => response.json())
+    .then(data => {
+      // Loop through the data and create options for the select element
+      data.forEach(country => {
+        const option = document.createElement("option");
+        option.value = country.name;
+        option.text = country.name;
+        document.getElementById("nationality").appendChild(option);
+      });
+    })
+    .catch(error => {
+      console.error("Error fetching countries:", error);
+      // Handle errors appropriately, e.g., display an error message to the user
+    });
+});
+</script>

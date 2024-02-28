@@ -36,7 +36,10 @@ public class Employee {
     @Temporal(TemporalType.DATE)
     private Date employeeDateOfAppointment;
 
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
+    private String password;
 
     private Long employeeBioMetricId;
 

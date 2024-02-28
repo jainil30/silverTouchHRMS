@@ -75,41 +75,6 @@ $(document).ready(function () {
         $(this).find(".fas").toggleClass("fa-minus fa-plus");
     });
 
-    console.log("Page is loaded")
-    //Save&Continue
-    function selectMenuItem(selectValue) {
-        // Get the <ul> element by its class name
-        console.log("selectMenuItem() Called")
-        var submenuList = document.querySelector('.custom-submenu');
-        if (!submenuList) {
-            console.error('Could not find the submenu list.');
-            return;
-        }
-
-        // Find the <li> element with the ID matching the selectValue
-        var selectedMenuItem = document.getElementById('subMenu' + selectValue);
-        if (!selectedMenuItem) {
-            console.error('Could not find the menu item with ID subMenu' + selectValue);
-            return;
-        }
-
-        // Remove the 'active' class from all <li> elements
-        var menuItems = submenuList.getElementsByTagName('li');
-        for (var i = 0; i < menuItems.length; i++) {
-            menuItems[i].classList.remove('active');
-        }
-
-        // Add the 'active' class to the selected <li> element
-        selectedMenuItem.classList.add('active');
-    }
-
-    // Call the function with the value of the "select" parameter
-    var selectParameterValue = getUrlParameter('select');
-    if (selectParameterValue) {
-        console.log("calling selectMenuItem()")
-        selectMenuItem(selectParameterValue);
-    }
-
 
 
 
@@ -117,22 +82,6 @@ $(document).ready(function () {
 
 var options = { searchable: true };
 
-// Fetch countries data from the REST Countries API
-  fetch("https://restcountries.com/v2/all")
-    .then(response => response.json())
-    .then(data => {
-      // Loop through the data and create options for the select element
-      data.forEach(country => {
-        const option = document.createElement("option");
-        option.value = country.name;
-        option.text = country.name;
-        document.getElementById("country").appendChild(option);
-      });
-    })
-    .catch(error => {
-      console.error("Error fetching countries:", error);
-      // Handle errors appropriately, e.g., display an error message to the user
-    });
 
 
 

@@ -31,7 +31,7 @@
 		            </div>
                     <p class="text-md-center fw-bolder fs-5 mb-4" style="color:#264085;">Human Resource Management System</p>
                     <h2 class="text-md-center mb-4">HRMS Login</h2>
-                    <form action="/authenticate" method="post">
+                    <form action="/doLogin" method="post">
                         <div class="mb-3">
 							  <input type="text" class="form-control" id="username" name="username" placeholder="Username">
                         </div>

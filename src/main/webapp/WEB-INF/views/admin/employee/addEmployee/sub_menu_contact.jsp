@@ -17,7 +17,7 @@
                             <div class="row m-0">
                                 <div class="col-md-8 p-0">
                                     <label for="workPhone" class="text-muted">Work Phone </label>
-                                    <input type="text" class="form-control" id="workPhone" placeholder="Enter Work Phone" />
+                                    <input type="text" class="form-control" name="workPhone" id="workPhone" placeholder="Enter Work Phone" />
                                 </div>
                                 <div class="col-md-1 p-0"></div>
                                 <div class="col-md-3 p-0">
@@ -30,13 +30,13 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="workMobile" class="text-muted">Work Mobile</label>
-                            <input type="text" class="form-control" id="workMobile" placeholder="Enter Work Mobile" />
+                            <input type="text" class="form-control" name="workMobile" id="workMobile" placeholder="Enter Work Mobile" />
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="homePhone" class="text-muted">Home Phone</label>
-                            <input type="text" class="form-control" id="homePhone" placeholder="Enter Home Phone" />
+                            <input type="text" class="form-control" name="homePhone" id="homePhone" placeholder="Enter Home Phone" />
                         </div>
                     </div>
                 </div>
@@ -44,19 +44,19 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="homeMobile" class="text-muted">Home Mobile</label>
-                            <input type="text" class="form-control" id="homeMobile" placeholder="Enter Home Mobile" />
+                            <input type="text" class="form-control" name="homeMobile" id="homeMobile" placeholder="Enter Home Mobile" />
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="corporateEmail" class="text-muted">Corporate Email</label>
-                            <input type="email" class="form-control" id="corporateEmail" placeholder="Enter Corporate Email" />
+                            <input type="email" class="form-control" name="corporateEmail" id="corporateEmail" placeholder="Enter Corporate Email" />
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="personalEmail" class="text-muted">Personal Email</label>
-                            <input type="email" class="form-control" id="personalEmail" placeholder="Enter Personal Email" />
+                            <input type="email" class="form-control" name="personalEmail" id="personalEmail" placeholder="Enter Personal Email" />
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="secondaryEmail" class="text-muted">Secondary Email</label>
-                            <input type="email" class="form-control" id="secondaryEmail" placeholder="Enter Secondary Email" />
+                            <input type="email" class="form-control" name="secondaryEmail" id="secondaryEmail" placeholder="Enter Secondary Email" />
                         </div>
                     </div>
                 </div>

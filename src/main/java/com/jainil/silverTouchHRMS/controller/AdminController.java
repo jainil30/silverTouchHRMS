@@ -37,10 +37,6 @@ public class AdminController {
     @Autowired
     private DrivingLicenseNumberService drivingLicenseNumberService;
 
-    @GetMapping("/")
-    public String showHomePage(){
-        return "login";
-    }
 
     @GetMapping("/dashboard")
     public String showAdminDashboardPage(Model model){
@@ -67,16 +63,14 @@ public class AdminController {
         return "admin/employee/addEmployee/masterPage2";
     }
 
-    @GetMapping("/masterPage2")
-    public String showMasterPage2() {
-        return "admin/employee/addEmployee/addEmployee";
-    }
+//    @GetMapping("/masterPage2")
+//    public String showMasterPage2() {
+//        return "admin/employee/addEmployee/addEmployee";
+//    }
 
 
 
     //Post Mapping
-
-
     @PostMapping("/saveEmployeeInfo")
     public String saveEmployeeInfo(@ModelAttribute Employee employee, @RequestParam("dateOfAppointment") String dateOfAppointment, @RequestParam("empDesignation") Long designationId) throws ParseException {
         System.out.println("saveEmployeeInfo() called");
@@ -119,7 +113,7 @@ public class AdminController {
         passportService.savePassport(passport);
         drivingLicenseNumberService.saveDrivingLicenseNumber(drivingLicenseNumber);
 
-        return "redirect:/admin/addEmployee?select=subMenuPersonal";
+        return "redirect:/admin/addEmployee?select=subMenuContact";
     }
 
 
