@@ -1,0 +1,48 @@
+*{
+	font-family: "Poppins", sans-serif;
+}
+.btn-primary{
+	background: linear-gradient(to right, #EF7F47, #FB9C4A);
+	color: white;
+	padding: 15px;
+	border-color: unset;
+	
+	border-radius: 10px;
+}
+.btn-secondary{
+	padding: 15px;
+	border-color: unset;
+	
+	border-radius: 10px;
+}
+.btn-primary:hover{
+	border-color: unset;
+}
+.btn-secondary:hover{
+	border-color: unset;
+}
+.form-control{
+    outline: none;
+    border: 1px solid #D0D5DE;
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    transition: 0.3s;
+    padding-left: 20px;
+}
+
+.form-control:focus{
+    border: 1px solid #D0D5DE;
+    background-color: #E9EEFF;
+}
+.badge-smaller {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.4rem;
+}
+.dropdown-menu {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}

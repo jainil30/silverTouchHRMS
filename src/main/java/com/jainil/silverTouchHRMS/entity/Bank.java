@@ -30,7 +30,7 @@ public class Bank {
 
     private String bsrCode;
 
-    @OneToOne(mappedBy = "employeeBank", cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
 //    @OneToOne
 //    @OneToOne
 //    @JoinColumn(name = "fk_employee_id")

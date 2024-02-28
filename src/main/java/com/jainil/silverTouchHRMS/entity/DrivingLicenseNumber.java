@@ -15,7 +15,7 @@ public class DrivingLicenseNumber {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long licenseNumber;
+    private Long drivingLicenseNumber;
 
 
     private String vehicleType;
@@ -34,9 +34,17 @@ public class DrivingLicenseNumber {
 
     private Boolean isForeigner;
 
-    private Boolean isAnyDisciplinaryProcedding;
+    private Boolean isAnyDisciplinaryProceeding;
 
     private String additionalInformation;
+
+    //is resident of other country?
+    @Temporal(TemporalType.DATE)
+    private Date migrationDateOfIndia;
+
+    private String migratedCountry;
+
+    private String otherCountryAddress;
 
 
     @OneToOne(mappedBy = "employeeDrivingLicense", cascade = CascadeType.ALL)

@@ -17,6 +17,9 @@ public class Passport {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long passportId;
 
+
+    private String passportNumber;
+
     @Temporal(TemporalType.DATE)
     private Date dateOfExpiry;
 

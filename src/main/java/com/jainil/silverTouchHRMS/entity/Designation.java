@@ -24,6 +24,6 @@ public class Designation {
 //    @OneToOne
 //    @OneToOne
 //    @JoinColumn(name = "fk_employee_id")
-    @OneToOne(mappedBy = "employeeDesignation", cascade = CascadeType.ALL)
+    @ManyToOne( cascade = CascadeType.ALL)
     private Employee employee;
 }
