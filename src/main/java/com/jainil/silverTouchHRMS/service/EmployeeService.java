@@ -9,6 +9,7 @@ public interface EmployeeService {
     public void saveEmployee(Employee employee);
 
     public Employee fetchById(Long empId);
+    public Employee fetchByUsername(String username);
 
     public List<Employee> fetchAll();
 

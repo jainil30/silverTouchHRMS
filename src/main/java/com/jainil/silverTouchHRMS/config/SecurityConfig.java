@@ -50,8 +50,7 @@ public class SecurityConfig {
 
                     httpSecurityFormLoginConfigurer.loginPage("/login").loginProcessingUrl("/doLogin").successHandler((request, response, authentication) -> {
                         System.out.println("Entered onSuccess Handler");
-                        System.out.println(request.getParameter("username"));
-                        request.getSession().setAttribute("email", request.getParameter("username"));
+
                         System.out.println("It worked");
                         for (GrantedAuthority authority : authentication.getAuthorities()) {
                             if (authority.getAuthority().equals(Role.ROLE_ADMIN.toString())) {

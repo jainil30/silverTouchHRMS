@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="container" id="familyForm">
-            <form>
+            <form action="/admin/saveFamilyInfo" method="POST">
                 <div class="row align-items-center">
                     <div class="col-md-4">
                         <div class="form-group">
@@ -150,7 +150,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="address" class="text-muted">Address</label>
-                            <textarea rows="3" cols="3" type="text" name="" class="form-control" id="address" placeholder="Enter Address"></textarea>
+                            <textarea rows="3" cols="3" type="text" name="address" class="form-control" id="address" placeholder="Enter Address"></textarea>
                         </div>
                     </div>
                 </div>

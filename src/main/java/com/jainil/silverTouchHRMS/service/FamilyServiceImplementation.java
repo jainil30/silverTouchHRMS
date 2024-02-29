@@ -4,11 +4,13 @@ package com.jainil.silverTouchHRMS.service;
 import com.fasterxml.jackson.databind.deser.CreatorProperty;
 import com.jainil.silverTouchHRMS.entity.Family;
 import com.jainil.silverTouchHRMS.repository.FamilyRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class FamilyServiceImplementation implements FamilyService{
 
+    @Autowired
     private FamilyRepository familyRepository;
     @Override
     public void saveFamily(Family family) {

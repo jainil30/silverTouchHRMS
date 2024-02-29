@@ -1,6 +1,7 @@
 package com.jainil.silverTouchHRMS.service;
 
 import com.jainil.silverTouchHRMS.entity.Employee;
+import com.jainil.silverTouchHRMS.entity.Role;
 import com.jainil.silverTouchHRMS.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -16,6 +17,8 @@ public class EmployeeServiceImplementation implements EmployeeService{
 
     @Override
     public void saveEmployee(Employee employee) {
+        employee.setPassword("123");
+        employee.setRole(Role.ROLE_EMPLOYEE);
         employeeRepository.save(employee);
     }
 
@@ -23,6 +26,12 @@ public class EmployeeServiceImplementation implements EmployeeService{
     public Employee fetchById(Long empId) {
         return employeeRepository.findById(empId).get();
     }
+
+    @Override
+    public Employee fetchByUsername(String username) {
+        return employeeRepository.findByEmployeeFirstName(username);
+    }
+
 
     @Override
     public List<Employee> fetchAll() {
